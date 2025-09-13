@@ -37,6 +37,9 @@ const postsRouter = require('./routers/posts')
 // procedure iniziali express 
 app.use(express.static('public'))
 
+// per leggere il body delle richieste
+app.use(express.json())
+
 app.listen(PORT, () => {
     console.log(`Server is runnig on http://localhost:${PORT}`)
 })
